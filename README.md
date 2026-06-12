@@ -8,6 +8,7 @@
 ### 문단
 첫째 문단입니다.  문장이 두 개죠.
 
+
 둘째 문단입니다.  저도
 문장이 두 개입니다.
 
@@ -24,6 +25,7 @@ __기울어진 글자__
 
 ---
 ### 목록
+> * 또는 + 또는 -
 #### 순서있는 목록
 1. 대한민국
 2. 체코
@@ -46,6 +48,7 @@ print("Hello Python")
 ```
 ---
 ### 링크와 이미지
+링크 : []
 림크 : [Markdown 공식 문서](https://www.markdownguide.org)
 이미지 : ![파이썬 로그](https://www.python.org/static/img/python-logo.png)
 ---
