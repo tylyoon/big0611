@@ -34,5 +34,5 @@ print("Hello Python")
 ```
 
 ### 링크와 이미지
-림크 : [Markdown 공식 문서] (https://www.Maskdownguide.org)
-이미지 : ![파이썬 로그] (https://www.python.org/static/img/python-logo.png)
+림크 : [Markdown 공식 문서](https://www.Maskdownguide.org)
+이미지 : ![파이썬 로그](https://www.python.org/static/img/python-logo.png)
