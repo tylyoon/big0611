@@ -11,6 +11,8 @@
 __기울어진 글자__
 ~~기울어진 글자~~
 > 인용구
+== 생성형AI와 쳇GPT를 활용한 빅데이터 분석 $ 자동화 시스템 구축 ==
+
 ---
 ### 목록
 #### 순서있는 목록
@@ -37,14 +39,24 @@ print("Hello Python")
 ### 링크와 이미지
 림크 : [Markdown 공식 문서](https://www.markdownguide.org)
 이미지 : ![파이썬 로그](https://www.python.org/static/img/python-logo.png)
-
+---
 ##표
 | 번호 | 이름 |
 |------|------|
 | 1 | 개구리 도마뱀|
 | 2 | 도마뱀 개구리| 
-
+---
 ### 할일 목록
 - [x] write the  press release
 - [ ] 웹사이트 수정
 - [ ] contact the media
+---
+### 이모지, 특수문자
+#### 이모지
+That is so funny! : Joy :
+`윈`+`.` 😃
+####특수문자
+`한글의 자움` + `한자키`
+♥ , ※, ⓒ, &copy;
+
+### 하이라이트
