@@ -43,3 +43,8 @@ print("Hello Python")
 |------|------|
 | 1 | 개구리 도마뱀|
 | 2 | 도마뱀 개구리| 
+
+### 할일 목록
+- [x] write the  press release
+- [ ] 웹사이트 수정
+- [ ] contact the media
