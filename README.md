@@ -32,3 +32,7 @@ __기울어진 글자__
 ```python
 print("Hello Python")
 ```
+
+### 링크와 이미지
+림크 : [Markdown 공식 문서] (http://www.maskdownguide.org)
+이미지 : ![파이썬 로그] (http://www.python.org/static/img/python-logo.png)
