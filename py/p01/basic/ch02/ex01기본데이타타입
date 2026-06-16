@@ -1,0 +1,38 @@
+x,y = 10, -25
+z = 3.14
+print(type(x),type(y),type(z))
+
+a = 17e3
+b = 17e3
+c = -35.2e2
+d = 275e-2
+print(a,b,c,d)
+
+a = 100 > 50
+b = 100 < 50
+c = 100 == 50
+print(a,b, c)
+print(type(a))
+
+a = 'Hello'
+b = '123'
+c = "How are you?"
+print(a,b,c)
+print(type(a),type(b),type(c))
+
+x = """abc abc abc abc abc abc abc"""
+print(x)
+
+a1 = 'He said "I love you"'
+a2 = "He said \"I love you.\""
+print(a1,a2)
+
+temperature = '20'
+humidity = '50'
+print(int(temperature)+ int(humidity))
+
+a = 1
+b = 500
+c = ' '
+d = '하하호호'
+print(bool(a),bool(b),bool(c),bool(d))
