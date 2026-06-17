@@ -69,3 +69,6 @@ print(fruit_list)
 fruit_list.sort(reverse=True)
 print(fruit_list)
 
+fruit_list.clear()
+print(fruit_list)
+
