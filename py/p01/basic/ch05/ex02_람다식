@@ -1,0 +1,21 @@
+#람다식(lambda)
+# 함수를 한 줄로 간텬하게 표현
+#방법1 람다를 정의하는 동시에 실행
+(lambda x:x+5)(100)
+
+#방법2 람다를 변수에 할당
+sum5 = lambda x: x + 5
+print(sum5(100))
+
+#권장 체중 계산
+weight = lambda h: (h-100)*0.9
+print(weight(170))
+
+def weight(h):
+    weight = (h-100)*0.9
+    return weight
+
+print(weight(170))
+
+# 배개 변수가 2개인 경우
+
