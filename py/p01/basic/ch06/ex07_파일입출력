@@ -1,0 +1,47 @@
+# 파일 입력
+'''
+r(read) : 읽기 -> read()
+w(write) : 쓰기 -> 덮어씌운다. write()
+a(append) : 추가 write()
+'''
+#open(파일명,파일모드)
+ #작업하는 루트 폴더에 생성된다.
+f = open('abc1.txt','w')
+f.write('A B C D E F G')
+f.close()
+
+f = open('abc2.txt','w') 
+f.write('a b c d e f g')
+f.close()
+# 파일 출력
+# with 문 : close() 
+
+f = open('abc1.txt','r')
+print(f.read())
+f.close()
+
+f = open('abc2.txt','r')
+lines = f.readlines()
+for line in lines:
+    print(line)
+f.close()
+
+# with 문 : close() 자동처리
+'''
+with open('파일','파일모드',encoding='utf-8') as 별칭(변수):
+    별칭.write()
+    별칭.read() 글자 한자씩 읽는다.
+    readlines() 글자 한줄씩 읽는다.
+    윈도우는 encoding='cp949' 리눅스 encoding='utf-8'
+'''
+with open('일기.txt','w', encoding='utf-8') as f:
+    f.write('2026년 6월 22일 월요일\n')
+    f.close()
+
+with open('일기.txt','a', encoding='utf-8') as f:
+    f.write('대체로 흐림')
+    f.close
+
+with open('일기.txt','r', encoding='utf-8') as f:
+    print(f.read())
+    f.close()
