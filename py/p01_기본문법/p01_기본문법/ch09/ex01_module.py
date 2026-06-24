@@ -21,5 +21,5 @@ from diet import get_recommend_weight,print_valid_menu
 get_recommend_weight(160)
 print_valid_menu()
 
-import numpy as np
-import pandas as pd
+#import numpy as np
+#import pandas as pd
