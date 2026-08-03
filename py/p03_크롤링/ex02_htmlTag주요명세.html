@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!--
+    핵심 규칙:<p>태그 내부에블록 형태의 요소(Flow Content 내 주요 구역 태그)를 절대로 넣을 수 없습니다.
+•
+금지 예시:<p><div>...</div></p>또는<p><ul>...</ul></p>,<p><h1>...</h1></p>
+•
+이유: 브라우저 파서가<p>안에서<div>나<ul>을 만나는 순간, 여는<p>를 
+    강제로 닫아버려 DOM 구조가 깨집니다.
+    핵심 규칙: 제목 태그 내부에는 텍스트 및 인라인/Phrasing 요소만 들어갈 수 있으며,구역 분할 태그(<div>,<section>등)를 넣을 수 없습니다.
+•
+금지 예시:<h1><div>서비스 소개</div></h1>
+
+목록(List) 관련 태그
+🔗
+🔗 설문 폼 (또는 heading_4 기능)
+•
+핵심 규칙:<ul>과<ol>의직계 자식(Direct Child)으로는 오직<li>태그만 허용됩니다.
+•
+금지 예시:<ul><div>메뉴 1</div></ul>또는<ul><p>메뉴 1</p></ul>
+•
+올바른 예시:<ul>바로 아래에는 반드시<li>가 와야 하며,<div>나<a>등은<li>내부에 넣어야 합니다.HTML
+-->
+<!-- 올바른 구조 -->
+<ul>
+  <li>
+    <div>콘텐츠</div>
+  </li>
+</ul>
+<!-- 
+핵심 규칙:<dl>의 직계 자식으로는<dt>(용어),<dd>(설명), 그리고 이 둘을 그룹화하기 위한<div>만 들어올 수 있습니다.
+
+ 표(Table) 관련 태그
+🔗
+🔗 설문 폼 (또는 heading_4 기능)
+•
+핵심 규칙:<table>의 직계 자식 순서와 허용 태그는 명확히 정해져 있습니다.
+•
+직계 허용 태그:<caption>,<colgroup>,<thead>,<tbody>,<tfoot>,<tr>만 가능합니다. (<div>나<span>을<table>바로 아래 쓸 수 없음)
+•
+<tr>의 직계 자식:<tr>내부에는오직<th>와<td>만올 수 있습니다.
+ 폼(Form) 및 입력 관련 태그
+🔗
+🔗 설문 폼 (또는 heading_4 기능)
+•
+핵심 규칙:<form>태그 안에 또 다른<form>태그를 중첩(Nesting)할 수 없습니다.
+•
+금지 예시:<form action="A"><form action="B"></form></form>(바깥쪽 form이 전송될 때 안쪽 form 동작이 파괴됨)
+🔗
+🔗 설문 폼 (또는 heading_4 기능)
+•
+핵심 규칙:<label>내부에는대화형 요소를 중첩해서 또 넣을 수 없습니다.(예:<label>안에<button>이나<a>를 넣는 행위 금지)
+🔗
+🔗 설문 폼 (또는 heading_4 기능)
+•
+필수 속성 규칙:src속성 외에alt속성을 반드시 작성해야 합니다. (장식용 이미지라도alt=""형태로 명시 필요)
+
+
+5. 상호작용 및 링크 태그
+🔗
+🔗 설문 폼 (또는 heading_4 기능)
+•
+핵심 규칙:<a>태그 내부에또 다른<a>태그나<button>태그 등의 Interactive Content를 중첩할 수 없습니다.
+•
+금지 예시:<a href="...">클릭 <button>버튼</button></a>또는<a href="...">링크 1 <a href="...">링크 2</a></a>
+🔗
+🔗 설문 폼 (또는 heading_4 기능)
+•
+핵심 규칙:<button>태그 내부에대화형 요소(<a>,<input>,<select>,<textarea>등)를 넣을 수 없습니다.
+
+
+6. 문서 전체 구조 태그
+🔗
+🔗 설문 폼 (또는 heading_4 기능)
+•
+필수 규칙:
+•
+<html>의 직계 자식은 오직<head>하나와<body>하나여야 합니다.
+•
+<title>태그는<head>내부에반드시 단 1개만 존재해야 웹 표준 검사를 통과합니다.
+💡 한눈에 보는 중첩 금지 핵심 요약
+
+태그	금지되는 직계/내부 요소
+<p>	<div>, <ul>, <ol>, <p>, <table>, <h1>~<h6> 등 모든 블록 요소
+<ul>, <ol>	<li> 이외의 모든 요소 (<div>, <a>, <p> 등 금지)
+<tr>	<th>, <td> 이외의 모든 요소
+<a>	<a>, <button>, <input> 등 클릭/상호작용 가능한 모든 요소
+<form>	다른 <form> 요소 : <form> 중첩 금지
+-->
+
+    
+</body>
+</html>

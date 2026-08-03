@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!--
+    주요 HTML5 태그들의 기본(Default)display타입을블록,인라인,인라인-블록,특수/기타영역으로 분류한 전체 정리표입니다.
+
+
+1. 모든 주요 HTML 요소 Display 타입
+Display 타입	특징	해당 HTML 요소 (태그)
+block	• 한 줄 전체 차지 (자동 줄바꿈) • width, height, 상하좌우 margin/padding 모두 적용	<div>, <p>, <h1>~<h6>, <header>, <footer>, <main>, <nav>, <section>, <article>, <aside>, <figcaption>, <figure>, <blockquote>, <address>, <form>, <search>, <ol>, <ul>, <menu>, <li>, <hr>, <pre>, <details>, <summary> 등
+inline	• 콘텐츠 크기만큼만 차지 (줄바꿈 없음) • width, height, 상하 margin 적용 안 됨	<span>, <a>, <strong>, <b>, <em>, <i>, <small>, <q>, <code>, <mark>, <abbr>, <cite>, <sub>, <sup>, <time>, <label>, <br> 등
+inline-block	• 줄바꿈 없이 나란히 배치 • width, height, 상하좌우 margin 모두 설정 가능	<img>, <input>, <button>, <select>, <textarea>, <progress>, <meter> 등 (대부분 폼 컨트롤 및 대체 요소)
+table 계열	• 표(Table) 구조 형성을 위한 전용 레이아웃 타입	• <table> → table • <thead> / <tbody> / <tfoot> → table-header-group / row-group / footer-group • <tr> → table-row • <td> / <th> → table-cell • <caption> → table-caption
+none	• 화면에 렌더링되지 않고 공간도 차지하지 않음	<head>, <meta>, <script>, <style>, <link>, <title>, <!-- 주석 -->, <dialog>(닫힌 상태) 등
+contents	• 태그 자체의 상자(Box)를 없애고 자식 요소만 노출	<slot>, <template> (Shadow DOM 및 프레임워크 전용)
+💡 참고사항
+
+
+2. 3가지 Display 타입
+block,inline,inline-block은 HTML 요소가 화면에 배치되는 기본 규칙(Display 모델)을 결정짓는 핵심 개념입니다.
+
+구분	block	inline	inline-block
+줄바꿈 (Line-break)	O (언제나 새 줄에서 시작)	X (옆으로 나란히 배치)	X (옆으로 나란히 배치)
+너비 (width) / 높이 (height)	지정 가능 (미지정 시 100%)	지정 불가능 (콘텐츠 크기 고정)	지정 가능
+여백 (margin / padding)	상하좌우 모두 적용	좌우만 적용 (상하는 안 밀려남)	상하좌우 모두 적용
+포함 가능 요소	블록, 인라인 요소 모두 가능	인라인 요소만 가능	블록, 인라인 요소 모두 가능
+대표 태그	<div>, <p>, <h1>~<h6>	<span>, <a>, <strong>	<img>, <input>, <button>
+
+
+3. 타입별 세부 특징
+1)display: block
+"독점하는 커다란 상자"
+•
+배치 방식:한 줄을 통째로 독점합니다. 바로 옆에 빈 공간이 있어도 다음 요소는 무조건 다음 줄로 내려갑니다.
+•
+크기 제어:width와height를 직접 지정할 수 있습니다.width를 지정하지 않으면 부모 요소의 너비를100%채웁니다.
+•
+여백 제어:margin과padding의상·하·좌·우 모든 방향이 주변 요소를 밀어내며 정상 작동합니다.
+2)display: inline
+"문장 속 텍스트 흐름"
+•
+배치 방식:줄바꿈 없이 텍스트처럼 옆으로 계속 이어집니다. 줄이 모자라면 자연스럽게 다음 줄로 넘어갑니다.
+•
+크기 제어:width와height속성이completely 무시됩니다. 오직 내부콘텐츠(글자 등)의 크기만큼만영역을 차지합니다.
+•
+여백 제어:
+•
+margin-left,margin-right/padding-left,padding-right(좌우 여백):정상 작동합니다.
+•
+margin-top,margin-bottom(상하 여백):작동하지 않거나,padding-top/bottom의 경우 배경색은 칠해져도다른 요소의 위치를 밀어내지 못합니다.
+3)display: inline-block
+"옆으로 나란히 붙는 상자" (inline + block 융합)
+•
+배치 방식:inline처럼 줄바꿈 없이다른 요소들과 옆으로 나란히 배치됩니다.
+•
+크기 및 여백 제어:내부 성질은block과 같아서width,height, 상하좌우margin,padding을모두 자유롭게 설정할 수 있습니다.
+•
+특이점 (공백 현상):HTML 코드 상에서 태그 간 엔터(줄바꿈)나 띄어쓰기가 있으면, 화면상에약 4px의 미세한 간격이 자동으로 발생합니다.
+
+-->
+<style>
+  /* 1. Block: 너비/높이/여백이 모두 적용되며 각자 한 줄을 차지함 */
+  .box-block {
+    display: block;
+    width: 100px;
+    height: 40px;
+    margin: 10px; /* 상하좌우 적용 */
+    background: #ffadad;
+  }
+
+  /* 2. Inline: 너비/높이 무시됨, 상하 margin 무시됨, 옆으로 이어짐 */
+  .box-inline {
+    display: inline;
+    width: 100px;  /* 무시됨 */
+    height: 40px; /* 무시됨 */
+    margin: 20px;  /* 좌우만 적용됨 */
+    background: #ffd6a5;
+  }
+
+  /* 3. Inline-Block: 옆으로 이어지면서도 너비/높이/여백 모두 반영됨 */
+  .box-inline-block {
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    margin: 10px; /* 상하좌우 적용 */
+    background: #caffbf;
+  }</style>
+
+<!-- Block 테스트 -->
+<div class="box-block">Block 1</div>
+<div class="box-block">Block 2</div>
+
+<hr>
+
+<!-- Inline 테스트 -->
+<span class="box-inline">Inline 1</span>
+<span class="box-inline">Inline 2</span>
+
+<hr>
+
+<!-- Inline-Block 테스트 -->
+<div class="box-inline-block">Inline-Block 1</div>
+<div class="box-inline-block">Inline-Block 2</div>
+
+</body>
+</html>
